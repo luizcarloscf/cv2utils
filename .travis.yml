@@ -18,6 +18,6 @@ deploy:
   user: luizcarloscf
   distributions: sdist bdist_wheel
   password:
-    secure: AgEIcHlwaS5vcmcCJGRjNDU4ZDk2LTM0YmItNDVlNy05OTM0LTdiYjJiYzY0NjI5OQACJXsicGVybWlzc2lvbnMiOiAidXNlciIsICJ2ZXJzaW9uIjogMX0AAAYgwA2jPV6XldVsc_xkKk1Au-CbdgGQdPphzFxrksyBsYI
+    secure: pypi-AgEIcHlwaS5vcmcCJGRjNDU4ZDk2LTM0YmItNDVlNy05OTM0LTdiYjJiYzY0NjI5OQACJXsicGVybWlzc2lvbnMiOiAidXNlciIsICJ2ZXJzaW9uIjogMX0AAAYgwA2jPV6XldVsc_xkKk1Au-CbdgGQdPphzFxrksyBsYI
   on:
     branch: master
