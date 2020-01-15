@@ -13,8 +13,8 @@ setup(
     package_dir={'': 'cvutils'},
     zip_safe=False,
     install_requires=[
-        'opencv-python=>4.1.0',
-        'numpy=>1.16.1',
+        'opencv-python==4.1.2.*',
+        'numpy==1.16.1',
     ],
     include_package_data=True,
 )
