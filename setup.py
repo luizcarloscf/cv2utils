@@ -16,4 +16,5 @@ setup(
         'opencv-python=>4.1.0',
         'numpy=>1.16.1',
     ],
+    include_package_data=True,
 )

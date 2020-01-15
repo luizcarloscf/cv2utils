@@ -1,0 +1,20 @@
+language: python
+python:
+  - "3.5"
+  - "3.6"
+  - "3.7"
+# command to install dependencies
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y libglib2.0-0 libsm6 libxrender1 libfontconfig1
+install:
+  - pip install -r requirements.txt
+
+deploy:
+  provider: pypi
+  skip_existing: true
+  on:
+    tags: true
+  user: labviros
+  password:
+    secure: pypi-AgEIcHlwaS5vcmcCJGRjNDU4ZDk2LTM0YmItNDVlNy05OTM0LTdiYjJiYzY0NjI5OQACJXsicGVybWlzc2lvbnMiOiAidXNlciIsICJ2ZXJzaW9uIjogMX0AAAYgwA2jPV6XldVsc_xkKk1Au-CbdgGQdPphzFxrksyBsYI
