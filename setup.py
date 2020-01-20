@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='cv2utils',
-    version='0.0.2',
+    version='0.0.3',
     description='Face detector wrapper',
     long_description='Face detector wrapper',
     url='https://github.com/luizcarloscf/cv2utils.git',
