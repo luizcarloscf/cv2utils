@@ -17,6 +17,12 @@ class HaarCascadeFace(object):
                 Requirement.parse('cv2utils'), 'cv2utils' + os.path.sep + 'data' + os.path.sep +
                 'haarcascade_frontalface_default.xml')
 
+        if type(scaleFactor) is not float:
+            raise ValueError("Must be a float")
+
+        if type(minNeighbors) is not int:
+            raise ValueError("Must be a integer")
+
         if len(minSize) > 2:
             raise ValueError("Must be a tuple of two integers values")
 
