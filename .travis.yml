@@ -12,6 +12,9 @@ script:
   - echo "skipping tests"
 deploy:
   provider: pypi
+  skip_existing: true
+  on:
+    tags: true
   user: __token__
   distributions: sdist bdist_wheel
   password:
