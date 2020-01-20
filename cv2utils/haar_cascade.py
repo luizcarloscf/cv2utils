@@ -20,7 +20,7 @@ class HaarCascadeFace(object):
         if len(minSize) > 2:
             raise ValueError("Must be a tuple of two integers values")
 
-        if all([True if type(i) is int else False for i in minSize]):
+        if any([True if type(i) is not int else False for i in minSize]):
             raise ValueError("Must be a tuple of two integers values")
 
         self.scale_factor = scaleFactor
