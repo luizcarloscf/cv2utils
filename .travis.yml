@@ -3,21 +3,18 @@ python:
   - "3.5"
   - "3.6"
   - "3.7"
-# command to install dependencies
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y libglib2.0-0 libsm6 libxrender1 libfontconfig1
 install:
   - pip install -r requirements.txt
-
 script:
   - echo "skipping tests"
-
 deploy:
   provider: pypi
-  user: luizcarloscf
+  user: __token__
   distributions: sdist bdist_wheel
   password:
-    secure: cwShR6bE8c2ulE6dNNa81gIyevAhgHPi/AgvSGGABXyvLfhbiD/dXEDSn7bSteUR5aYEE0jNHyJlJ2lNr0neKyhwItUKvJ3QsgITEqWtPg/jR3fypuOgSyjeivJPQo3rKu+Heo/SUUQJPxR2xZud9EbBQx+Ah30bg34TxwTgij51Opb3e76+H1q9x029EmLZfPkV3U5+DnYFW8w7s+jupJAO91o27RCocJ2UDwv4FuTE7g627lpWZkoJssCqCA3L6ZInQPv+n9d9W6JizuSXtmmdXlZc0l/BBnl1QvHwrA0w+DLG4rRwT7BDeBoGM8Kbf5HceP8QMfetfmm47Me7tgqwSZRpRvSnv0y4s4GswYqCvpE/rZSgO86GCqVhxYpcjJgJgSmHnWct/6/3iF7FFIC2uSuk7JPgvQAWgWpQaX5RMeuaLm8GJBtQVCLD98sxmW0aZYiBkk0pnvaJZqv965r0OP/+kAL4GQVh96E4BaSuQrYeo+O830l0KUDVWLUOTELjZ0IeszixZiab9EDo8gEmstSoJgB4YvgBw4lANt7UNHgF1Ixd4QJ04N/g1kvJkmlsyxtpWyhv3W+eDIeU0qEEn4ZlmFYslgykfWL5++S1cyk3l7VKZU0WGrBG+5WA6vdHZ2hq41jjQxE/af8eC6wf5L+aWF+O8Py6xEb5Ydo=
+    secure: D2RjbFrQDM1fFaIJBquJExuQvj/pjWPWCNYEedNICuW+3H2BYtoNyPhHrqJH5kMZbZwNQDc1BjvOTT4EKfnEMV9w9fV1o3T1ylK5ElDFteF6moK4CVzEFDy1j3+v34i1h3PbaJS6ISgoO0EuBHl1AY3MsubzzResPIvguJQhjV4n6Zd5S4O+jAv8K2xT2m5cDPIgB1HpaQ8xSy7bgLiE7bR6ju4ToahN14jGVBNbkm7VBA/J6sGgom23EURajyRsPqpq9DcyTvTqQ96tgrfIfUAtGPio37bhyJ09NQ9+hWMnWhH4CAKBZAL9K6fWvEdI/jFr9PjENgC1KxtXT1DXtgSYv3PRpk12PIj6+MEY2U8PGryTYjenbemv+jmnaqjszQ39ex1sYgEgCmvqe/Jw8IgsYwXnu+ItvdErGChvhzsFhvVvgYbn/1gpGQ/MNrWyBQ286r/0Y486vE2mZIQ7l4xK436CPOD7ywXXsClzVARvlnnp5LPUfH2vRJMQ//cfKC+7hqMaGwqeytXhi4QsAhWVLhU36C5rg8NxhU/Kqw3a4sTdFMmBjkqVzDqx5z8PWIUKLolxLur7epzGXgKIp92ncNlsQ/jvm4xblqqM1+fyab5cwrGA3eachxdlo1GLgF5PDhnPsqdnc4il0HLVsgSNbXbGl0370Bx65mTgNnc=
   on:
     branch: master
