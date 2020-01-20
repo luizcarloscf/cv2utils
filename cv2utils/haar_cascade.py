@@ -1,6 +1,7 @@
+import os
 import cv2
 import numpy as np
-import pkg_resources
+from pkg_resources import Requirement, resource_filename
 
 
 class HaarCascadeFace(object):
@@ -12,8 +13,9 @@ class HaarCascadeFace(object):
                  minSize: tuple = (1, 1)):
 
         if weights_file is None:
-            weights_file = pkg_resources.resource_stream(
-                'cvutils', 'data/haarcascade_frontalface_default.xml')
+            weights_file = resource_filename(
+                Requirement.parse('cv2utils'), 'cv2utils' + os.path.sep + 'data' + os.path.sep +
+                'haarcascade_frontalface_default.xml')
 
         if len(minSize) > 2:
             raise ValueError("Must be a tuple of two integers values")
