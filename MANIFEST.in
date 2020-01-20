@@ -1,4 +1,4 @@
-include cvutils/data/deploy.prototxt.txt
-include cvutils/data/haarcascade_frontalface_default.xml
-include cvutils/data/res10_300x300_ssd_iter_140000_fp16.caffemodel
+include cv2utils/data/deploy.prototxt.txt
+include cv2utils/data/haarcascade_frontalface_default.xml
+include cv2utils/data/res10_300x300_ssd_iter_140000_fp16.caffemodel
 include requirements.txt
