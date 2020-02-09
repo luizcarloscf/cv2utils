@@ -45,7 +45,7 @@ class FaceCascade(object):
             minNeighbors=self.min_neighbors,
             minSize=self.min_size)
 
-        return {'box': faces}
+        return [{'box': faces}]
 
 
 class EyeCascade (object):
@@ -89,4 +89,4 @@ class EyeCascade (object):
             minNeighbors=self.min_neighbors,
             minSize=self.min_size)
 
-        return {'box': eyes}
+        return [{'box': eyes}]
