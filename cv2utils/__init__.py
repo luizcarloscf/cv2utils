@@ -1,3 +1,4 @@
-from cv2utils.haar_cascade import HaarCascadeFace
+from cv2utils.haar_cascade import FaceCascade
+from cv2utils.haar_cascade import EyeCascade
 
-__all__ = ["HaarCascadeFace"]
+__all__ = ["FaceCascade", "EyeCascade"]
