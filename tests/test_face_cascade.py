@@ -1,5 +1,6 @@
 import cv2
 import pytest
+import numpy as np 
 from cv2utils import FaceCascade
 
 def test_detect_faces():
@@ -14,7 +15,7 @@ def test_detect_faces():
 
     assert type(first) is dict
     assert 'box' in first
-    assert type(first['box']) is list()
+    assert type(first['box']) is list
     
 
     

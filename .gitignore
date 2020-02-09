@@ -1,4 +1,17 @@
-__pycache__
+# Compiled python modules.
 *.pyc
+
+# Setuptools distribution folder.
+/dist/
+
+# Python egg metadata, regenerated from source files by setuptools.
+/*.egg-info
+/*.egg
+
+.tox
+.venv
 .vscode
-src/*.egg-info
+.pytest_cache
+src/is_wire.egg-info
+__pycache__
+.coverage
