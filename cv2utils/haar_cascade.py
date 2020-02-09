@@ -17,7 +17,7 @@ class FaceCascade(object):
                 Requirement.parse('cv2utils'), 'cv2utils' + os.path.sep + 'data' + os.path.sep +
                 'haarcascade_frontalface_default.xml')
 
-        if type(scale_factor) is not float or type(scale_factor) is not int:
+        if type(scale_factor) is not float and type(scale_factor) is not int:
             raise ValueError("scale_factor must be a float or int")
 
         if type(min_neighbors) is not int:
@@ -45,7 +45,7 @@ class FaceCascade(object):
             minNeighbors=self.min_neighbors,
             minSize=self.min_size)
 
-        return [{'box': faces}]
+        return [{'box': faces.tolist()}]
 
 
 class EyeCascade (object):
@@ -61,7 +61,7 @@ class EyeCascade (object):
                 Requirement.parse('cv2utils'), 'cv2utils' + os.path.sep + 'data' + os.path.sep +
                 'haarcascade_eye.xml')
 
-        if type(scale_factor) is not float or type(scale_factor) is not int:
+        if type(scale_factor) is not float and type(scale_factor) is not int:
             raise ValueError("scale_factor must be a float or int")
 
         if type(min_neighbors) is not int:
@@ -89,4 +89,4 @@ class EyeCascade (object):
             minNeighbors=self.min_neighbors,
             minSize=self.min_size)
 
-        return [{'box': eyes}]
+        return [{'box': eyes.tolist()}]
