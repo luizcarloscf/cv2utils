@@ -10,7 +10,7 @@ class FaceCascade(object):
                  weights_file: str = None,
                  scale_factor: float = 1.1,
                  min_neighbors: int = 5,
-                 min_size: tuple = (1, 1)):
+                 min_size: tuple = (10, 10)):
 
         if weights_file is None:
             weights_file = resource_filename(
@@ -45,21 +45,21 @@ class FaceCascade(object):
             minNeighbors=self.min_neighbors,
             minSize=self.min_size)
 
-        return [{'box': faces.tolist()}]
+        return [{'label': 'face', 'box': face.tolist()} for face in faces]
 
 
-class EyeCascade (object):
-    
+class EyeCascade(object):
+
     def __init__(self,
                  weights_file: str = None,
                  scale_factor: float = 1.1,
                  min_neighbors: int = 5,
                  min_size: tuple = (1, 1)):
-    
+
         if weights_file is None:
             weights_file = resource_filename(
-                Requirement.parse('cv2utils'), 'cv2utils' + os.path.sep + 'data' + os.path.sep +
-                'haarcascade_eye.xml')
+                Requirement.parse('cv2utils'),
+                'cv2utils' + os.path.sep + 'data' + os.path.sep + 'haarcascade_eye.xml')
 
         if type(scale_factor) is not float and type(scale_factor) is not int:
             raise ValueError("scale_factor must be a float or int")
@@ -89,4 +89,4 @@ class EyeCascade (object):
             minNeighbors=self.min_neighbors,
             minSize=self.min_size)
 
-        return [{'box': eyes.tolist()}]
+        return [{'label': 'eye', 'box': eye.tolist()} for eye in eyes]
