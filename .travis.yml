@@ -9,7 +9,7 @@ before_install:
 install:
   - pip install tox-travis
 script:
-  - echo "skip test"
+  - tox
 deploy:
   provider: pypi
   skip_existing: true
