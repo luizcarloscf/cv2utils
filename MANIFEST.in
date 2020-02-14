@@ -1,5 +1,5 @@
 include cv2utils/data/deploy.prototxt.txt
 include cv2utils/data/haarcascade_frontalface_default.xml
 include cv2utils/data/res10_300x300_ssd_iter_140000_fp16.caffemodel
-inclide cv2utils/data/haarcascade_eye.xml
+include cv2utils/data/haarcascade_eye.xml
 include requirements.txt
