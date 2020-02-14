@@ -1,4 +1,10 @@
-__pycache__
 *.pyc
+/dist/
+/*.egg-info
+/*.egg
+.tox
+.venv
 .vscode
-src/*.egg-info
+.pytest_cache
+__pycache__
+.coverage
