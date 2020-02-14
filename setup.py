@@ -12,7 +12,7 @@ def readme():
 
 setup(
     name='cv2utils',
-    version='0.0.6',
+    version='0.0.7',
     description='Face detector wrapper',
     long_description=readme(),
     long_description_content_type='text/markdown',
