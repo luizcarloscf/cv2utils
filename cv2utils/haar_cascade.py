@@ -52,14 +52,14 @@ class EyeCascade(object):
 
     def __init__(self,
                  weights_file: str = None,
-                 scale_factor: float = 1.1,
-                 min_neighbors: int = 5,
-                 min_size: tuple = (1, 1)):
+                 scale_factor: float = 1.3,
+                 min_neighbors: int = 6,
+                 min_size: tuple = (30, 30)):
 
         if weights_file is None:
             weights_file = resource_filename(
-                Requirement.parse('cv2utils'),
-                'cv2utils' + os.path.sep + 'data' + os.path.sep + 'haarcascade_eye.xml')
+                Requirement.parse('cv2utils'), 'cv2utils' + os.path.sep + 'data' + os.path.sep +
+                'haarcascade_eye.xml')
 
         if type(scale_factor) is not float and type(scale_factor) is not int:
             raise ValueError("scale_factor must be a float or int")
@@ -76,6 +76,7 @@ class EyeCascade(object):
         self.scale_factor = scale_factor
         self.min_neighbors = min_neighbors
         self.min_size = min_size
+        print(weights_file)
         self.eye_cascade = cv2.CascadeClassifier(weights_file)
 
     def detect_eyes(self, image):

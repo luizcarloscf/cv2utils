@@ -16,14 +16,14 @@ class FaceDnn(object):
         if prototxt_file is None:
             prototxt = resource_filename(
                 Requirement.parse('cv2utils'),
-                'cv2utils' + os.path.sep + 'data' + os.path.sep + 'deploy.prototxt')
+                'cv2utils' + os.path.sep + 'data' + os.path.sep + 'deploy.prototxt.txt')
         else:
             prototxt = prototxt_file
 
         if caffemodel_file is None:
             caffemodel = resource_filename(
-                Requirement.parse('cv2utils'), 'cv2lib' + os.path.sep + 'data' + os.path.sep +
-                'res10_300x300_ssd_iter_140000.caffemodel')
+                Requirement.parse('cv2utils'), 'cv2utils' + os.path.sep + 'data' + os.path.sep +
+                'res10_300x300_ssd_iter_140000_fp16.caffemodel')
         else:
             caffemodel = caffemodel_file
 
@@ -60,8 +60,8 @@ class FaceDnn(object):
 
                 all_detections.append({
                     'label': 'face',
-                    'confidence': confidence,
-                    'box': [x_start, y_start, x_end, y_end]
+                    'confidence': float(confidence),
+                    'box': [int(x_start), int(y_start), int(x_end), int(y_end)]
                 })
 
         return all_detections
