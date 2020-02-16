@@ -9,27 +9,66 @@ Implementation of some object detection included in opencv.
 
 It can be installed through pip:
 ```bash
-pip install --user cv2utils
+pip3 install --user cv2utils
 ```
-This implementation requires OpenCV.
+This implementation requires OpenCV and Numpy.
 
 ## Usage
 
-### OpenCV Face DNN
+#### OpenCV Face DNN
 
-
-<p align="center"><img src="https://raw.githubusercontent.com/luizcarloscf/cv2utils/develop/result_dnn.jpg" align=middle width=640pt height=261pt/></p>
-
+The following example illustrates the ease of use of this package:
 ```python
-
+>>> import cv2
+>>> from cv2utils import FaceDnn
+>>> image = cv2.imread("face.jpg")
+>>> detector = FaceDnn()
+>>> detector.detect_faces(image)
+[{'label': 'face', 'confidence': 0.9966524243354797, 'box': [210, 64, 522, 465]}]
 ```
 
-<p align="center"><img src="https://raw.githubusercontent.com/luizcarloscf/cv2utils/develop/result_cascade.jpg" align=middle width=640pt height=261pt/></p>
+The detector returns a list of DICTIONARY objects. Each DICTIONARY object contains three main keys: 'box', 'confidence' and 'label':
 
+* The bounding **box** is formatted as [x_initial, y_initial, x_final, y_final] under the key 'box'.
+* The **confidence** is the probability estimate for a bounding box to be matching the label.
+* The **label** identifies which object is detecting.
+
+Look the file [result_dnn.py](https://github.com/luizcarloscf/cv2utils/blob/master/result_cascade.py) to see how the image below was generated.
+
+<p align="center"><img src="https://raw.githubusercontent.com/luizcarloscf/cv2utils/master/result_dnn.jpg" align=middle width=700pt height=250pt/></p>
+
+
+#### OpenCV Face Cascade and Eye Cascade
+
+The following example illustrates the ease of use of this package:
 
 ```python
-
+>>> import cv2
+>>> from cv2utils import FaceCascade, EyeCascade
+>>> image = imread("face.jpg")
+>>> face_detector = FaceCascade()
+>>> faces = face_detector.detect_faces(image)
+>>> faces
+[{'label': 'face', 'box': [199, 65, 591, 457]}]
+>>>
+>>> [x,y,x_final,y_final] = faces[0]['box']
+>>> eye_detector = EyeCascade()
+>>> eye_detector.detect_eyes(image[y:y_final, x:x_final])
+[{'label': 'eye', 'box': [83, 132, 166, 215]}, {'label': 'eye', 'box': [218, 119, 298, 199]}]
 ```
 
+The detector returns a list of DICTIONARY objects. Each DICTIONARY object contains three main keys: 'box', 'label':
+
+* The bounding **box** is formatted as [x_initial, y_initial, x_final, y_final] under the key 'box'.
+* The **label** identifies which object is detecting.
+
+Look the file [result_cascade.py](https://github.com/luizcarloscf/cv2utils/blob/master/result_cascade.py) to see how the image below was generated.
+
+<p align="center"><img src="https://raw.githubusercontent.com/luizcarloscf/cv2utils/master/result_cascade.jpg" align=middle width=700pt height=250pt/></p>
 
 
+
+
+## License
+
+[MIT](https://github.com/luizcarloscf/cv2utils/blob/master/LICENSE).
