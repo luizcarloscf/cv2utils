@@ -45,16 +45,21 @@ class FaceCascade(object):
             minNeighbors=self.min_neighbors,
             minSize=self.min_size)
 
-        return [{'label': 'face', 'box': face.tolist()} for face in faces]
+        boxes = list()
+        for face in faces:
+            [x, y, w, h] = face.tolist()
+            boxes.append([x, y, x+w, y+h])
+
+        return [{'label': 'face', 'box': box} for box in boxes]
 
 
 class EyeCascade(object):
 
     def __init__(self,
                  weights_file: str = None,
-                 scale_factor: float = 1.3,
-                 min_neighbors: int = 6,
-                 min_size: tuple = (30, 30)):
+                 scale_factor: float = 1.1,
+                 min_neighbors: int = 3,
+                 min_size: tuple = (0, 0)):
 
         if weights_file is None:
             weights_file = resource_filename(
@@ -76,7 +81,6 @@ class EyeCascade(object):
         self.scale_factor = scale_factor
         self.min_neighbors = min_neighbors
         self.min_size = min_size
-        print(weights_file)
         self.eye_cascade = cv2.CascadeClassifier(weights_file)
 
     def detect_eyes(self, image):
@@ -90,4 +94,9 @@ class EyeCascade(object):
             minNeighbors=self.min_neighbors,
             minSize=self.min_size)
 
-        return [{'label': 'eye', 'box': eye.tolist()} for eye in eyes]
+        boxes = list()
+        for eye in eyes:
+            [x, y, w, h] = eye.tolist()
+            boxes.append([x, y, x+w, y+h])
+
+        return [{'label': 'eye', 'box': box} for box in boxes]

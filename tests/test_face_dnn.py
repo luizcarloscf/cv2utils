@@ -5,9 +5,9 @@ from cv2utils import FaceDnn
 
 def test_detect_faces():
 
-    hodor = cv2.imread("hodor.jpg")
+    face = cv2.imread("face.jpg")
     face_detector = FaceDnn()
-    result = face_detector.detect_faces(hodor)
+    result = face_detector.detect_faces(face)
 
     assert len(result) == 1
     assert type(result[0]) is dict

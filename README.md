@@ -13,3 +13,23 @@ pip install --user cv2utils
 ```
 This implementation requires OpenCV.
 
+## Usage
+
+### OpenCV Face DNN
+
+
+<p align="center"><img src="https://raw.githubusercontent.com/luizcarloscf/cv2utils/develop/result_dnn.jpg" align=middle width=640pt height=261pt/></p>
+
+```python
+
+```
+
+<p align="center"><img src="https://raw.githubusercontent.com/luizcarloscf/cv2utils/develop/result_cascade.jpg" align=middle width=640pt height=261pt/></p>
+
+
+```python
+
+```
+
+
+

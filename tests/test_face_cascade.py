@@ -5,11 +5,11 @@ from cv2utils import FaceCascade
 
 def test_detect_faces():
 
-    hodor = cv2.imread("hodor.jpg")
+    image= cv2.imread("face.jpg")
     face_detector = FaceCascade()
-    result = face_detector.detect_faces(hodor)
+    result = face_detector.detect_faces(image)
 
-    assert len(result) == 2
+    assert len(result) == 1
     assert type(result[0]) is dict
     assert 'box' in result[0]
     assert 'label' in result[0]
