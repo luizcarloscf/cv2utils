@@ -3,7 +3,7 @@
 ![PyPI](https://img.shields.io/pypi/v/cv2utils.svg?label=cv2utils)
 ![Travis](https://img.shields.io/travis/com/luizcarloscf/cv2utils.svg?label=Linux)
 
-Implementation of some object detection included in opencv.
+Implementation of some object detection in Python3.5+.
 
 ## Installation
 
@@ -67,7 +67,10 @@ Look the file [result_cascade.py](https://github.com/luizcarloscf/cv2utils/blob/
 <p align="center"><img src="https://raw.githubusercontent.com/luizcarloscf/cv2utils/master/result_cascade.jpg" align=middle width=700pt height=250pt/></p>
 
 
+## References
 
+[OpenCV HaarCascades](https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html)
+[OpenCV Dnn](https://docs.opencv.org/master/d2/d58/tutorial_table_of_content_dnn.html)
 
 ## License
 
