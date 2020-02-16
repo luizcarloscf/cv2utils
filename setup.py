@@ -2,7 +2,7 @@ from os import path
 from setuptools import setup, find_packages
 
 __author__ = "Luiz Carlos Cosmi Filho"
-__version__= "0.0.8"
+__version__= "0.0.9"
 
 
 def readme():
@@ -12,7 +12,7 @@ def readme():
 
 setup(
     name='cv2utils',
-    version='0.0.8',
+    version='0.0.9',
     description='Implementation of some object detection',
     long_description=readme(),
     long_description_content_type='text/markdown',

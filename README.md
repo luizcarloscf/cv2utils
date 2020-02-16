@@ -33,7 +33,7 @@ The detector returns a list of DICTIONARY objects. Each DICTIONARY object contai
 * The **confidence** is the probability estimate for a bounding box to be matching the label.
 * The **label** identifies which object is detecting.
 
-Look the file [result_dnn.py](https://github.com/luizcarloscf/cv2utils/blob/master/result_cascade.py) to see how the image below was generated.
+Look the file [result_dnn.py](https://github.com/luizcarloscf/cv2utils/blob/master/result_dnn.py) to see how the image below was generated.
 
 <p align="center"><img src="https://raw.githubusercontent.com/luizcarloscf/cv2utils/master/result_dnn.jpg" align=middle width=700pt height=250pt/></p>
 
@@ -57,7 +57,7 @@ The following example illustrates the ease of use of this package:
 [{'label': 'eye', 'box': [83, 132, 166, 215]}, {'label': 'eye', 'box': [218, 119, 298, 199]}]
 ```
 
-The detector returns a list of DICTIONARY objects. Each DICTIONARY object contains three main keys: 'box', 'label':
+The detector returns a list of DICTIONARY objects. Each DICTIONARY object contains two main keys: 'box', 'label':
 
 * The bounding **box** is formatted as [x_initial, y_initial, x_final, y_final] under the key 'box'.
 * The **label** identifies which object is detecting.
@@ -69,8 +69,9 @@ Look the file [result_cascade.py](https://github.com/luizcarloscf/cv2utils/blob/
 
 ## References
 
-[OpenCV HaarCascades](https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html)
-[OpenCV Dnn](https://docs.opencv.org/master/d2/d58/tutorial_table_of_content_dnn.html)
+* [OpenCV HaarCascades](https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html)
+
+* [OpenCV Dnn](https://docs.opencv.org/master/d2/d58/tutorial_table_of_content_dnn.html)
 
 ## License
 
