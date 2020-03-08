@@ -22,8 +22,8 @@ class FaceDnn(object):
 
         if caffemodel_file is None:
             caffemodel = resource_filename(
-                Requirement.parse('cv2utils'), 'cv2utils' + os.path.sep + 'data' + os.path.sep +
-                'res10_300x300_ssd_iter_140000_fp16.caffemodel')
+                Requirement.parse('cv2utils'),
+                'cv2utils' + os.path.sep + 'data' + os.path.sep + 'res10_300x300_ssd_iter_140000_fp16.caffemodel')
         else:
             caffemodel = caffemodel_file
 

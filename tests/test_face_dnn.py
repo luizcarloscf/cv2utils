@@ -1,7 +1,7 @@
 import cv2
 import pytest
-import numpy as np 
 from cv2utils import FaceDnn
+
 
 def test_detect_faces():
 
@@ -18,14 +18,15 @@ def test_detect_faces():
     assert type(result[0]['label']) is str
     assert type(result[0]['confidence']) is float
     assert all([True if type(i) is int else False for i in result[0]['box']]) is True
-    assert len(result[0]['box']) is 4
+    assert len(result[0]['box']) == 4
     
 
 def test_invalid_image():
     not_image = cv2.imread("requirements-test.txt")
     face_detector = FaceDnn()
     with pytest.raises(ValueError):
-        result = face_detector.detect_faces(not_image)
+        face_detector.detect_faces(not_image)
+
 
 def test_no_face():
     face_detector = FaceDnn()

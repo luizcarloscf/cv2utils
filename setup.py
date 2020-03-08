@@ -1,14 +1,15 @@
 from os import path
-from setuptools import setup, find_packages
+from setuptools import setup
 
 __author__ = "Luiz Carlos Cosmi Filho"
-__version__= "0.0.9"
+__version__ = "0.0.9"
 
 
 def readme():
     directory = path.abspath(path.dirname(__file__))
     with open(path.join(directory, 'README.md'), encoding="UTF-8") as f:
         return f.read()
+
 
 setup(
     name='cv2utils',
@@ -27,14 +28,14 @@ setup(
         'numpy==1.18.1',
     ],
     classifiers=[
-          'Environment :: Console',
-          'Intended Audience :: Developers',
-          'Intended Audience :: Education',
-          'Intended Audience :: Science/Research',
-          'Natural Language :: English',
-          'Programming Language :: Python :: 3.5',
-          'Programming Language :: Python :: 3.6',
-          'Programming Language :: Python :: 3.7',
+        'Environment :: Console',
+        'Intended Audience :: Developers',
+        'Intended Audience :: Education',
+        'Intended Audience :: Science/Research',
+        'Natural Language :: English',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
     ],
     keywords="dnn haar cascade face eye detection opencv numpy pip package",
     include_package_data=True,
