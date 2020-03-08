@@ -36,7 +36,7 @@ The detector returns a list of DICTIONARY objects. Each DICTIONARY object contai
 
 Look the file [result_dnn.py](https://github.com/luizcarloscf/cv2utils/blob/master/examples/result_dnn.py) to see how the image below was generated.
 
-<p align="center"><img src="https://raw.githubusercontent.com/luizcarloscf/cv2utils/master/result_dnn.jpg" align=middle width=700pt height=250pt/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/luizcarloscf/cv2utils/master/examples/images/result_dnn.jpg" align=middle width=700pt height=250pt/></p>
 
 
 #### OpenCV Face Cascade and Eye Cascade
@@ -63,9 +63,9 @@ The detector returns a list of DICTIONARY objects. Each DICTIONARY object contai
 * The bounding **box** is formatted as [x_initial, y_initial, x_final, y_final] under the key 'box'.
 * The **label** identifies which object is detecting.
 
-Look the file [result_cascade.py](https://github.com/luizcarloscf/cv2utils/blob/master/result_cascade.py) to see how the image below was generated.
+Look the file [result_cascade.py](https://github.com/luizcarloscf/cv2utils/blob/master/examples/result_cascade.py) to see how the image below was generated.
 
-<p align="center"><img src="https://raw.githubusercontent.com/luizcarloscf/cv2utils/master/examples/result_cascade.jpg" align=middle width=700pt height=250pt/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/luizcarloscf/cv2utils/master/examples/images/result_cascade.jpg" align=middle width=700pt height=250pt/></p>
 
 
 ## References
