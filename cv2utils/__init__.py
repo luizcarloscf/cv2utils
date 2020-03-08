@@ -5,5 +5,3 @@ from cv2utils.opencv_dnn import FaceDnn
 __all__ = ["FaceCascade",
            "EyeCascade",
            "FaceDnn"]
-
-__version__ = '0.0.9'

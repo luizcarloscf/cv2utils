@@ -1,11 +1,14 @@
 from os import path
 from setuptools import setup
-from cv2utils import __version__
+
 
 def readme():
     directory = path.abspath(path.dirname(__file__))
     with open(path.join(directory, 'README.md'), encoding="UTF-8") as f:
         return f.read()
+
+
+__version__ = "0.1.0"
 
 
 setup(
