@@ -1,6 +1,5 @@
 import os
 import cv2
-import numpy as np
 from pkg_resources import Requirement, resource_filename
 
 
@@ -14,8 +13,8 @@ class FaceCascade(object):
 
         if weights_file is None:
             weights_file = resource_filename(
-                Requirement.parse('cv2utils'), 'cv2utils' + os.path.sep + 'data' + os.path.sep +
-                'haarcascade_frontalface_default.xml')
+                Requirement.parse('cv2utils'),
+                'cv2utils' + os.path.sep + 'data' + os.path.sep + 'haarcascade_frontalface_default.xml')
 
         if type(scale_factor) is not float and type(scale_factor) is not int:
             raise ValueError("scale_factor must be a float or int")
@@ -48,7 +47,7 @@ class FaceCascade(object):
         boxes = list()
         for face in faces:
             [x, y, w, h] = face.tolist()
-            boxes.append([x, y, x+w, y+h])
+            boxes.append([x, y, x + w, y + h])
 
         return [{'label': 'face', 'box': box} for box in boxes]
 
@@ -63,8 +62,8 @@ class EyeCascade(object):
 
         if weights_file is None:
             weights_file = resource_filename(
-                Requirement.parse('cv2utils'), 'cv2utils' + os.path.sep + 'data' + os.path.sep +
-                'haarcascade_eye.xml')
+                Requirement.parse('cv2utils'),
+                'cv2utils' + os.path.sep + 'data' + os.path.sep + 'haarcascade_eye.xml')
 
         if type(scale_factor) is not float and type(scale_factor) is not int:
             raise ValueError("scale_factor must be a float or int")
@@ -97,6 +96,6 @@ class EyeCascade(object):
         boxes = list()
         for eye in eyes:
             [x, y, w, h] = eye.tolist()
-            boxes.append([x, y, x+w, y+h])
+            boxes.append([x, y, x + w, y + h])
 
         return [{'label': 'eye', 'box': box} for box in boxes]

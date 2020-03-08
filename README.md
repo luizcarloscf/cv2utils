@@ -1,8 +1,9 @@
 # cv2utils
 
-![PyPI](https://img.shields.io/pypi/v/cv2utils.svg?label=cv2utils)
-![Travis](https://img.shields.io/travis/com/luizcarloscf/cv2utils.svg?label=Linux)
-
+[![PyPI](https://img.shields.io/pypi/v/cv2utils.svg?label=cv2utils)](https://pypi.org/project/cv2utils)
+[![Travis](http://img.shields.io/travis/luizcarloscf/cv2utils/master.svg?label=linux)](https://travis-ci.com/luizcarloscf/cv2utils)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/cv2utils)](https://pypi.org/project/cv2utils)
+[![License](https://img.shields.io/badge/license-MIT%20-blue.svg)](https://opensource.org/licenses/mit)
 Implementation of some object detection in Python3.5+.
 
 ## Installation
@@ -33,7 +34,7 @@ The detector returns a list of DICTIONARY objects. Each DICTIONARY object contai
 * The **confidence** is the probability estimate for a bounding box to be matching the label.
 * The **label** identifies which object is detecting.
 
-Look the file [result_dnn.py](https://github.com/luizcarloscf/cv2utils/blob/master/result_dnn.py) to see how the image below was generated.
+Look the file [result_dnn.py](https://github.com/luizcarloscf/cv2utils/blob/master/examples/result_dnn.py) to see how the image below was generated.
 
 <p align="center"><img src="https://raw.githubusercontent.com/luizcarloscf/cv2utils/master/result_dnn.jpg" align=middle width=700pt height=250pt/></p>
 
@@ -64,7 +65,7 @@ The detector returns a list of DICTIONARY objects. Each DICTIONARY object contai
 
 Look the file [result_cascade.py](https://github.com/luizcarloscf/cv2utils/blob/master/result_cascade.py) to see how the image below was generated.
 
-<p align="center"><img src="https://raw.githubusercontent.com/luizcarloscf/cv2utils/master/result_cascade.jpg" align=middle width=700pt height=250pt/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/luizcarloscf/cv2utils/master/examples/result_cascade.jpg" align=middle width=700pt height=250pt/></p>
 
 
 ## References
