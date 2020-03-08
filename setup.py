@@ -1,9 +1,6 @@
 from os import path
 from setuptools import setup
-
-__author__ = "Luiz Carlos Cosmi Filho"
-__version__ = "0.0.9"
-
+from cv2utils import __version__
 
 def readme():
     directory = path.abspath(path.dirname(__file__))
@@ -13,13 +10,13 @@ def readme():
 
 setup(
     name='cv2utils',
-    version='0.0.9',
+    version=__version__,
     description='Implementation of some object detection',
     long_description=readme(),
     long_description_content_type='text/markdown',
     url='https://github.com/luizcarloscf/cv2utils.git',
-    author='Luiz Carlos Cosmi Filho',
-    author_email='luizcarloscosmifilho@gmail.com',
+    author="Luiz Carlos Cosmi Filho",
+    author_email="luizcarloscosmifilho@gmail.com",
     license='MIT',
     packages=['cv2utils'],
     zip_safe=False,
