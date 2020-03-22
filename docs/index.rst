@@ -14,6 +14,10 @@ cv2utils
     :target: https://travis-ci.com/luizcarloscf/cv2utils
     :alt: Travis
 
+.. image:: https://readthedocs.org/projects/cv2utils/badge/?version=latest
+    :target: https://cv2utils.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
 .. image:: https://img.shields.io/pypi/dm/cv2utils
     :target: https://pypi.org/project/cv2utils
     :alt: PyPI - Downloads

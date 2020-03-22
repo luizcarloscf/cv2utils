@@ -8,7 +8,7 @@ with open(path.join(here, 'cv2utils/__version__.py'), encoding='UTF-8') as f:
     exec(f.read(), about)
 
 
-with open(path.join(here, 'README.md'), encoding="UTF-8") as f:
+with open(path.join(here, 'README.rst'), encoding="UTF-8") as f:
     readme = f.read()
 
 setup(
