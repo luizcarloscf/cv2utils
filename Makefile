@@ -36,8 +36,5 @@ test:
 	@ $(PYTHON) -m tox
 
 docs:
-	@ rm -f docs/cv2utils.rst
-	@ rm -f docs/modules.rst
-	@ sphinx-apidoc -o docs/ cv2utils
 	$(MAKE) -C docs clean
-	$(MAKE) -C docs html
+	$(MAKE) -C docs html 
