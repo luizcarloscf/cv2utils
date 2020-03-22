@@ -1,10 +1,18 @@
+# python
 *.pyc
 /dist/
 /*.egg-info
 /*.egg
-.tox
-.venv
-.vscode
-.pytest_cache
 __pycache__
+
+# tet
+.tox
+.pytest_cache
 .coverage
+
+# vscode
+.vscode
+
+# Sphinx
+docs/_*
+

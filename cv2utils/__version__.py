@@ -1,0 +1,8 @@
+__package__ = 'cv2utils'
+__version__ = '0.1.0'
+__author__ = 'Luiz Carlos Cosmi Filho'
+__author_email__ = 'luizcarloscosmifilho@gmail.com'
+__description__ = 'Implementation of some object detection'
+__url__ = 'https://github.com/luizcarloscf/cv2utils.git'
+__copyright__ = 'Copyright 2020 Luiz Carlos Cosmi Filho'
+__license__ = 'MIT'

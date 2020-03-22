@@ -1,27 +1,27 @@
 from os import path
 from setuptools import setup
 
+here = path.abspath(path.dirname(__file__))
 
-def readme():
-    directory = path.abspath(path.dirname(__file__))
-    with open(path.join(directory, 'README.md'), encoding="UTF-8") as f:
-        return f.read()
+about = {}
+with open(path.join(here, 'cv2utils/__version__.py'), encoding='UTF-8') as f:
+    exec(f.read(), about)
 
 
-__version__ = "0.1.0"
-
+with open(path.join(here, 'README.md'), encoding="UTF-8") as f:
+    readme = f.read()
 
 setup(
-    name='cv2utils',
-    version=__version__,
-    description='Implementation of some object detection',
-    long_description=readme(),
+    name=about['__package__'],
+    version=about['__version__'],
+    description=about['__description__'],
+    long_description=readme,
     long_description_content_type='text/markdown',
-    url='https://github.com/luizcarloscf/cv2utils.git',
-    author="Luiz Carlos Cosmi Filho",
-    author_email="luizcarloscosmifilho@gmail.com",
-    license='MIT',
-    packages=['cv2utils'],
+    url=about['__url__'],
+    author=about['__author__'],
+    author_email=about['__author_email__'],
+    license=about['__license__'],
+    packages=[about['__package__']],
     zip_safe=False,
     install_requires=[
         'opencv-contrib-python==4.2.0.32',

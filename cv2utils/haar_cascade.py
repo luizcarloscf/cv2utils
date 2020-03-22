@@ -4,7 +4,30 @@ from pkg_resources import Requirement, resource_filename
 
 
 class FaceCascade(object):
+    """Face detection using Haar feature-based cascade classifiers.
 
+    Parameters
+    ---------- 
+
+    weights_file: str, optional
+        Path to the xml file.
+    
+    scale_factor: float, optional
+        Scaling by some factor (create a scale pyramid)
+
+    min_neighbots: int, optional
+        How many neighbors each candidate rectangle should have to retain it        
+
+    size: tuple, optional
+        Minimal size
+
+    Examples
+    --------
+    >>> import cv2
+    >>> from cv2utils import FaceCascade
+    >>> face_detector = FaceCascade()
+
+    """
     def __init__(self,
                  weights_file: str = None,
                  scale_factor: float = 1.1,
@@ -34,6 +57,31 @@ class FaceCascade(object):
         self.face_cascade = cv2.CascadeClassifier(weights_file)
 
     def detect_faces(self, image):
+        """Apply the image on classifier.
+
+        Parameters
+        ----------
+        
+        image: numpy.array
+            Image (BGR color space) for detection face on it.
+        
+        Returns
+        -------
+        list
+            a list of all dicts containg all detections. Each dict contains: box (The bounding box
+            is formatted as [x_initial, y_initial, x_final, y_final] under the key 'box') 
+            and label (identifies which object is detecting)
+
+        Examples
+        --------
+        >>> import cv2
+        >>> from cv2utils import FaceCascade, EyeCascade
+        >>> image = imread("face.jpg")
+        >>> face_detector = FaceCascade()
+        >>> faces = face_detector.detect_faces(image)
+        >>> faces
+        [{'label': 'face', 'box': [199, 65, 591, 457]}]
+        """
 
         if image is None or not hasattr(image, "shape"):
             raise ValueError("Image not valid.")
@@ -53,7 +101,29 @@ class FaceCascade(object):
 
 
 class EyeCascade(object):
+    """Eye detection using Haar feature-based cascade classifiers.
 
+    Parameters
+    ---------- 
+
+    weights_file: str, optional
+        Path to the xml file.
+    
+    scale_factor: float, optional
+        Scaling by some factor (create a scale pyramid)
+
+    min_neighbots: int, optional
+        How many neighbors each candidate rectangle should have to retain it        
+
+    size: tuple, optional
+        Minimal size
+
+    Examples
+    --------
+    >>> import cv2
+    >>> from cv2utils import EyeCascade
+    >>> eye_detector = EyeCascade()
+    """
     def __init__(self,
                  weights_file: str = None,
                  scale_factor: float = 1.1,
@@ -83,6 +153,40 @@ class EyeCascade(object):
         self.eye_cascade = cv2.CascadeClassifier(weights_file)
 
     def detect_eyes(self, image):
+        """Apply the image on classifier.
+
+        Parameters
+        ----------
+        
+        image: numpy.array
+            Image (BGR color space) for detection eye on it.
+        
+        Returns
+        -------
+        list
+            a list of all dicts containg all detections. Each dict contains: box (The bounding box
+            is formatted as [x_initial, y_initial, x_final, y_final] under the key 'box') 
+            and label (identifies which object is detecting)
+
+        Examples
+        --------
+
+        This classifier was trained with images with low resolution. So, for better results, apply
+        the face detector first and create a Region Of Interest (ROI).
+        
+        >>> import cv2
+        >>> from cv2utils import FaceCascade, EyeCascade
+        >>> image = imread("face.jpg")
+        >>> face_detector = FaceCascade()
+        >>> faces = face_detector.detect_faces(image)
+        >>> faces
+        [{'label': 'face', 'box': [199, 65, 591, 457]}]
+        >>>
+        >>> [x,y,x_final,y_final] = faces[0]['box']
+        >>> eye_detector = EyeCascade()
+        >>> eye_detector.detect_eyes(image[y:y_final, x:x_final])
+        [{'label': 'eye', 'box': [83, 132, 166, 215]}, {'label': 'eye', 'box': [218, 119, 298, 199]}]
+        """
 
         if image is None or not hasattr(image, "shape"):
             raise ValueError("Image not valid.")
