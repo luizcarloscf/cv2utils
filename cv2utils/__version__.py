@@ -1,5 +1,5 @@
 __package__ = 'cv2utils'
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 __author__ = 'Luiz Carlos Cosmi Filho'
 __author_email__ = 'luizcarloscosmifilho@gmail.com'
 __description__ = 'Implementation of some object detection'
