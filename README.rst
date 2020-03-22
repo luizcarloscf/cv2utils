@@ -10,12 +10,18 @@ cv2utils
     :target: https://travis-ci.com/luizcarloscf/cv2utils
     :alt: Travis
 
+.. image:: https://readthedocs.org/projects/cv2utils/badge/?version=latest
+    :target: https://cv2utils.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
 .. image:: https://img.shields.io/pypi/dm/cv2utils
     :target: https://pypi.org/project/cv2utils
     :alt: PyPI - Downloads
 
 .. image:: https://img.shields.io/badge/license-MIT%20-blue.svg
     :target: https://github.com/luizcarloscf/cv2utils/LICENSE
+
+
 
 
 Implementation of some object detection in Python3.5+. It is included in this project:
@@ -36,7 +42,7 @@ Implementation of some object detection in Python3.5+. It is included in this pr
     :alt: Result DNN
 
 
-For for info, `Read the docs <https://www.google.com/>`__.
+For for info, `Read the docs <https://cv2utils.readthedocs.io/en/latest/>`__.
 
 Installation
 ------------
