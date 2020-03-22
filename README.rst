@@ -28,7 +28,7 @@ Implementation of some object detection in Python3.5+. It is included in this pr
 
 * Face and Eye detection using OpenCV Haar feature-based cascade classifiers.
 
-.. image:: https://raw.githubusercontent.com/luizcarloscf/cv2utils/develop/examples/images/result_cascade.jpg
+.. image:: https://raw.githubusercontent.com/luizcarloscf/cv2utils/master/examples/images/result_cascade.jpg
     :align: center
     :target: https://github.com/luizcarloscf/cv2utils/blob/master/examples/images/result_cascade.jpg
     :alt: Result Cascade
@@ -36,7 +36,7 @@ Implementation of some object detection in Python3.5+. It is included in this pr
 
 * Face detection using OpenCV Deep Neural Networks
 
-.. image:: https://raw.githubusercontent.com/luizcarloscf/cv2utils/develop/examples/images/result_dnn.jpg
+.. image:: https://raw.githubusercontent.com/luizcarloscf/cv2utils/master/examples/images/result_dnn.jpg
     :align: center
     :target: https://github.com/luizcarloscf/cv2utils/blob/master/examples/images/result_dnn.jpg
     :alt: Result DNN
