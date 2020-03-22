@@ -4,6 +4,7 @@
 [![Travis](http://img.shields.io/travis/luizcarloscf/cv2utils/master.svg?label=linux)](https://travis-ci.com/luizcarloscf/cv2utils)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/cv2utils)](https://pypi.org/project/cv2utils)
 [![License](https://img.shields.io/badge/license-MIT%20-blue.svg)](https://opensource.org/licenses/mit)
+
 Implementation of some object detection in Python3.5+.
 
 ## Installation
