@@ -17,6 +17,7 @@ cv2utils
 .. image:: https://img.shields.io/badge/license-MIT%20-blue.svg
     :target: https://github.com/luizcarloscf/cv2utils/LICENSE
 
+
 Implementation of some object detection in Python3.5+. It is included in this project:
 
 * Face and Eye detection using OpenCV Haar feature-based cascade classifiers.
@@ -26,6 +27,7 @@ Implementation of some object detection in Python3.5+. It is included in this pr
     :target: https://github.com/luizcarloscf/cv2utils/blob/master/examples/images/result_cascade.jpg
     :alt: Result Cascade
 
+
 * Face detection using OpenCV Deep Neural Networks
 
 .. image:: https://raw.githubusercontent.com/luizcarloscf/cv2utils/develop/examples/images/result_dnn.jpg
@@ -33,7 +35,8 @@ Implementation of some object detection in Python3.5+. It is included in this pr
     :target: https://github.com/luizcarloscf/cv2utils/blob/master/examples/images/result_dnn.jpg
     :alt: Result DNN
 
-For for info, `Read the docs <>`__.
+
+For for info, `Read the docs <https://www.google.com/>`__.
 
 Installation
 ------------
