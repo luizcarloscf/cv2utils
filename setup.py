@@ -25,7 +25,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'opencv-contrib-python==4.2.0.32',
-        'numpy==1.18.1',
+        'numpy==1.22.0',
     ],
     classifiers=[
         'Environment :: Console',
